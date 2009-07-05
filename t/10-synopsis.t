@@ -32,7 +32,7 @@ plan tests => 4;
     $bear = Encode::decode('x-utf8-e4u-none', $bear, FB_EMOJI_GMAIL());
 # ------------------------------------------------------------------------
 
-like $sun,     qr[/mail/e/docomo_ne_jp/000],   'SUN FB_DOCOMO_GMAIL';
-like $cloud,   qr[/mail/e/ezweb_ne_jp/001],    'CLOUD FB_KDDIWEB_GMAIL';
-like $hamster, qr[/mail/e/softbank_ne_jp/1CA], 'HAMSTER FB_SOFTBANK_GMAIL';
+like $sun,     qr[/mail/e/docomo_ne_jp/000],   'SUN FB_EMOJI_GMAIL';
+like $cloud,   qr[/mail/e/ezweb_ne_jp/001],    'CLOUD FB_EMOJI_GMAIL';
+like $hamster, qr[/mail/e/softbank_ne_jp/1CA], 'HAMSTER FB_EMOJI_GMAIL';
 like $bear,    qr[/mail/e/1C1],                'BEAR FB_EMOJI_GMAIL';

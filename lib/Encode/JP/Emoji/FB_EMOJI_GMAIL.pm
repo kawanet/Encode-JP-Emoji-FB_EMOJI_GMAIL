@@ -42,6 +42,8 @@ Note that this is B<NOT> an official service powered by Gmail.
 This returns C<img> element for PC to display emoji images.
 Having conflicts with SoftBank encoding, KDDI(app) encoding is B<NOT> recommended.
 
+=head2 FB_EMOJI_GMAIL()
+
 =head1 LINKS
 
 =over 4

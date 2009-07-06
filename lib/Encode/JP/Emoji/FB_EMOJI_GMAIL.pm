@@ -11,22 +11,22 @@ Encode::JP::Emoji::FB_EMOJI_GMAIL - Emoji fallback functions with Gmail
     use Encode::JP::Emoji::FB_EMOJI_GMAIL;
 
     # DoCoMo Shift_JIS <SJIS+F89F> octets
-    # <img src="http://mail.google.com/mail/e/docomo_ne_jp/000" class="e" />
+    # <img src="http://mail.google.com/mail/e/docomo_ne_jp/000" alt="[晴れ]" class="e" />
     my $sun = "\xF8\x9F";
     Encode::from_to($sun, 'x-sjis-emoji-docomo', 'x-sjis-emoji-none', FB_EMOJI_GMAIL());
 
     # KDDI(web) Shift_JIS <SJIS+F665> octets
-    # <img src="http://mail.google.com/mail/e/ezweb_ne_jp/001" class="e" />
+    # <img src="http://mail.google.com/mail/e/ezweb_ne_jp/001" alt="[曇り]" class="e" />
     my $cloud = "\xF6\x65";
     Encode::from_to($cloud, 'x-sjis-emoji-kddiweb', 'x-sjis-emoji-none', FB_EMOJI_GMAIL());
 
     # SoftBank UTF-8 <U+E524> string
-    # <img src="http://mail.google.com/mail/e/softbank_ne_jp/1CA" class="e" />
+    # <img src="http://mail.google.com/mail/e/softbank_ne_jp/1CA" alt="[ハムスター]" class="e" />
     my $hamster = "\x{E524}";
     $hamster = Encode::encode('x-sjis-e4u-none', $hamster, FB_EMOJI_GMAIL());
 
     # Google UTF-8 <U+FE1C1> octets
-    # <img src="http://mail.google.com/mail/e/1C1" class="e" />
+    # <img src="http://mail.google.com/mail/e/1C1" alt="[クマ]" class="e" />
     my $bear = "\xF3\xBE\x87\x81";
     $bear = Encode::decode('x-utf8-e4u-none', $bear, FB_EMOJI_GMAIL());
 
@@ -155,5 +155,7 @@ sub FB_EMOJI_GMAIL {
         sprintf $format => $num, $name;
     };
 }
+
+# Ｔｈｉｓ　ｆｉｌｅ　ｗａｓ　ｗｒｉｔｔｅｎ　ｉｎ　ＵＴＦ－８
 
 1;
